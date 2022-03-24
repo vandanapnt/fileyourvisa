@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<div class="card">
+<div class="card vtest1">
     <div class="card-body">
         <div class="row">
             <div class="col">
