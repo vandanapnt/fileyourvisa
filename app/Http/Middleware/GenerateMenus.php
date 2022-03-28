@@ -113,6 +113,7 @@ class GenerateMenus
                 'class' => 'c-sidebar-nav-link',
             ]);
 
+           
             // Submenu: Roles
             $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Roles', [
                 'route' => 'backend.roles.index',
@@ -122,6 +123,20 @@ class GenerateMenus
                 'order'         => 106,
                 'activematches' => 'admin/roles*',
                 'permission'    => ['view_roles'],
+            ])
+            ->link->attr([
+                'class' => 'c-sidebar-nav-link',
+            ]);
+
+         // Agents
+             $menu->add('<i class="c-sidebar-nav-icon cil-people"></i> Agents', [
+                'route' => 'backend.agents.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+            ->data([
+                'order'         => 107,
+                'activematches' => 'admin/agents*',
+                'permission'    => [],
             ])
             ->link->attr([
                 'class' => 'c-sidebar-nav-link',

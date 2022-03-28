@@ -125,4 +125,18 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::patch("$module_name/{id}", "$controller_name@update")->name("$module_name.update");
     Route::delete("$module_name/{id}", "$controller_name@destroy")->name("$module_name.destroy");
  
+   /*
+   *
+   * Agent 
+   * 
+   * 
+   * ------------
+   */
+
+   $module_name = 'agents';
+   $controller_name = 'AgentController';
+
+   Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);   
+   
+
 });
