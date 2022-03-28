@@ -127,6 +127,21 @@ class GenerateMenus
                 'class' => 'c-sidebar-nav-link',
             ]);
 
+        //Services
+             $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Services', [
+                'route' => 'backend.services.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+            ->data([
+                'order'         => 107,
+                'activematches' => 'admin/services*',
+                'permission'    => [],
+            ])
+            ->link->attr([
+                'class' => 'c-sidebar-nav-link',
+            ]);
+
+
             // Log Viewer
             // Log Viewer Dropdown
             $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-list-rich"></i> Log Viewer', [
@@ -170,7 +185,7 @@ class GenerateMenus
                 'class' => 'c-sidebar-nav-link',
             ]);
 
-            // Access Permission Check
+         // Access Permission Check
             $menu->filter(function ($item) {
                 if ($item->data('permission')) {
                     if (auth()->check()) {

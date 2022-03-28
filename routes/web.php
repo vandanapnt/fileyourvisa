@@ -107,4 +107,21 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::resource("$module_name", "$controller_name");
     Route::patch("$module_name/{id}/block", ['as' => "$module_name.block", 'uses' => "$controller_name@block", 'middleware' => ['permission:block_users']]);
     Route::patch("$module_name/{id}/unblock", ['as' => "$module_name.unblock", 'uses' => "$controller_name@unblock", 'middleware' => ['permission:block_users']]);
+
+    /*
+    *
+    *  Services Routes
+    *
+    * ---------------------------------------------------------------------
+    */
+    $module_name = 'services';
+    $controller_name = 'ServicesController';
+    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
+   
+    Route::get("$module_name/create", ['as' => "$module_name.create", 'uses' => "$controller_name@create"]);
+    Route::get("$module_name/{id}", ['as' => "$module_name.show", 'uses' => "$controller_name@show"]);
+    Route::post("$module_name", "$controller_name@store")->name("$module_name.store");
+    Route::get("$module_name/{id}/edit", ['as' => "$module_name.edit", 'uses' => "$controller_name@edit"]);
+    Route::put("$module_name", "$controller_name@update")->name("$module_name.update");
+ 
 });
