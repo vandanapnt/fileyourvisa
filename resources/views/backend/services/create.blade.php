@@ -11,7 +11,7 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-    <div class="row test">
+    <div class="row">  
            <div class="col">
                 <h4 class="card-title mb-0">
                     <i class="{{ $module_icon }}"></i> {{ $module_title }}                   

@@ -122,6 +122,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get("$module_name/{id}", ['as' => "$module_name.show", 'uses' => "$controller_name@show"]);
     Route::post("$module_name", "$controller_name@store")->name("$module_name.store");
     Route::get("$module_name/{id}/edit", ['as' => "$module_name.edit", 'uses' => "$controller_name@edit"]);
-    Route::put("$module_name", "$controller_name@update")->name("$module_name.update");
+    Route::patch("$module_name/{id}", "$controller_name@update")->name("$module_name.update");
+    Route::delete("$module_name/{id}", "$controller_name@destroy")->name("$module_name.destroy");
  
 });

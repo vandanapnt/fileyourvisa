@@ -36,8 +36,9 @@
         <div class="row mt-4">
             <div class="col">
               
-                <form enctype="multipart/form-data" action="{{ route('backend.services.update') }}" method="put">
-                {{ csrf_field() }}
+                <form enctype="multipart/form-data" action="{{ route('backend.services.update', $service->id) }}" method="post">
+                @method('PATCH')
+                @csrf
 
                 <div class="form-group row">
                     {{ html()->label(__('Title'))->class('col-sm-2 form-control-label')->for('service_title') }}

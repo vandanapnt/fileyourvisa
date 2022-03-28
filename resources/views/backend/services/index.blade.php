@@ -78,8 +78,9 @@
                             </td>
                             <td class="text-right">
                              <a href='{!!route("backend.$module_name.edit", $row->id)!!}' class='btn btn-sm btn-success mt-1' data-toggle="tooltip" title="@lang('Edit') {{ ucwords(Str::singular($module_name)) }}"><i class="fas fa-wrench"></i></a>
-                            <a href='{!!route("backend.$module_name.show", $row->id)!!}' class='btn btn-sm btn-success mt-1' data-toggle="tooltip" title="@lang('Show') {{ ucwords(Str::singular($module_name)) }}"><i class="fas fa-tv"></i></a>
-                            </td>
+                           <!-- <a href='{!!route("backend.$module_name.show", $row->id)!!}' class='btn btn-sm btn-success mt-1' data-toggle="tooltip" title="@lang('Show') {{ ucwords(Str::singular($module_name)) }}"><i class="fas fa-tv"></i></a> -->
+                           <a href="{!!route('backend.services.destroy', $row->id)!!}" class="btn btn-danger btn-sm mt-1" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a> 
+                           </td>
                         </tr>
                         @endforeach
                     </tbody>
