@@ -15,7 +15,7 @@ class UserUpdatedProfileUpdate implements ShouldQueue
      */
     public function __construct()
     {
-        //
+        //            
     }
 
     /**
@@ -28,8 +28,12 @@ class UserUpdatedProfileUpdate implements ShouldQueue
     public function handle(UserUpdated $event)
     {
         $user = $event->user;
-
-        $userprofile = Userprofile::where('user_id', '=', $user->id)->first();
+       // $this->id = $user->id;
+        //$this->name = $user->name;
+        
+        $userprofile = Userprofile::where('user_id', $user->id)->first();
+       //var_dump($user);  echo  $this->name;
+       
         $userprofile->name = $user->name;
         $userprofile->first_name = $user->first_name;
         $userprofile->last_name = $user->last_name;

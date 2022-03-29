@@ -1,0 +1,739 @@
+@media screen and (max-width: 1199px) {
+  .footer-logo-area-in {
+    padding: 60px 15px;
+  }
+  .calluspanel {
+    padding: 0 15px;
+  }
+  .subcrib-section-in {
+    padding: 15px;
+  }
+  .font_60 {
+    font-size: 4rem;
+  }
+  .sub-txt h4 {
+    font-size: 16px;
+  }
+  .topMenu ul li {
+    margin: 0 1rem;
+  }
+  .topMenu ul li a {
+    font-size: 14px;
+  }
+  .carttext span {
+    font-size: 16px;
+  }
+  .services-text {
+    padding: 15px;
+  }
+  .font_22 {
+    font-size: 1.8rem;
+  }
+  .font_33 {
+    font-size: 2.6rem;
+  }
+  .font_15 {
+    font-size: 1.3rem;
+  }
+  .about-home-lft-text h3 br {
+    display: none;
+  }
+  .font_40 {
+    font-size: 3.6rem;
+  }
+  .font_72 {
+    font-size: 6rem;
+  }
+  .testiclone {
+    top: 8%;
+    transform: translateY(-8%);
+  }
+  .banner {
+    padding: 100px 0;
+  }
+  .right-ab-img:after {
+    top: 30%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+    box-shadow: 0 0 1.6rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .right-ab-img:after {
+    top: 50%;
+  }
+  .banner {
+    padding: 80px 0;
+  }
+  .headerTop {
+    padding: 0 1.5rem;
+    height: auto !important;
+  }
+  .opentime h5 span {
+    display: block;
+  }
+  .desktop-appy {
+    display: none !important;
+  }
+  .location-rght-apply .location {
+    margin-right: 0px;
+  }
+  .mobile-visible {
+    display: block;
+  }
+  .headerMain {
+    padding: 0 1.5rem;
+    height: 5.4rem;
+  }
+  .headerMain .navbar-brand img {
+    max-height: 4.8rem;
+  }
+  .headerNavLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menuTriger {
+    background-color: transparent;
+    border: none;
+    height: 17px;
+    padding: 0;
+    position: relative;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 36px;
+  }
+
+  .menuTriger .navbar-toggler-icon {
+    background-color: #080808;
+    background-image: none;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 28px;
+  }
+  .menuTriger .navbar-toggler-icon:after,
+  .menuTriger .navbar-toggler-icon:before {
+    background-color: #080808;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+  .menuTriger .navbar-toggler-icon:before {
+    opacity: 0;
+    top: 8px;
+  }
+  .menuTriger .navbar-toggler-icon:after {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 100%;
+  }
+  .menuTriger.collapsed .navbar-toggler-icon:after {
+    left: 0;
+    top: 16px;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0);
+    /* width: 22px; */
+  }
+  .menuTriger.collapsed .navbar-toggler-icon:before {
+    opacity: 1;
+  }
+
+  .menuTriger.collapsed {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  .menuTriger.collapsed .navbar-toggler-icon {
+    left: 0;
+    top: 0;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0);
+    width: 100%;
+  }
+
+  .menuTriger:focus {
+    box-shadow: none;
+    border: none;
+  }
+
+  .topMenu {
+    position: absolute;
+    display: block !important;
+    top: 10rem;
+    height: calc(100vh - 10rem);
+    background-color: #222652;
+    width: 31rem;
+    right: 0;
+    text-align: left;
+    overflow-y: scroll;
+    padding: 2rem 1rem;
+    transform: translateX(31rem);
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+  .topMenu.show {
+    transform: translateX(0);
+    box-shadow: 0 0 1.6rem 0 rgba(0, 0, 0, 0.3);
+    z-index: 9;
+  }
+  .topMenu ul li {
+    margin: 0 0 0.8rem 0;
+    background-color: #2f346ad4;
+  }
+  .topMenu ul li a {
+    height: auto;
+    padding: 1.7rem 1.5rem !important;
+    text-align: left;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+  }
+  .topMenu ul li a:before {
+    display: none;
+  }
+  .topMenu ul ul.dropdown-menu {
+    padding: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .topMenu ul ul.dropdown-menu li a {
+    background-color: #222652;
+    padding: 1.7rem 1.5rem !important;
+  }
+  .topMenu ul ul.dropdown-menu li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meetBoss {
+    padding: 8rem 0;
+  }
+  .meetBossSec-1 {
+    margin-bottom: 3rem;
+  }
+  .meetBossSec-1 .cmnBtn {
+    margin-top: 2rem;
+  }
+  .takeTour {
+    padding: 10rem 0;
+    min-height: auto;
+  }
+  .takeTour .cmnBtn {
+    margin-top: 5rem;
+  }
+  .homeKitpic {
+    height: 40rem;
+  }
+  .homeKitcontent {
+    padding-left: 3rem;
+  }
+
+  .customizeItBg {
+    right: 4rem;
+  }
+  .customizeIt .cmnBtn {
+    margin-top: 6rem;
+  }
+  .customizeIt {
+    min-height: 50rem;
+  }
+  .values {
+    padding: 8rem 0;
+  }
+  .designYouOwn {
+    padding: 10rem 0;
+  }
+
+  .footerBox {
+    width: 25%;
+    padding-left: 1rem;
+    min-height: 0;
+    margin-top: 1rem;
+  }
+  .footerMain .container > .row {
+    margin: -1rem 0 0 -1rem;
+  }
+  .footerBoxLogo {
+    width: 100%;
+    position: relative;
+    margin-top: 5rem;
+  }
+  .footerBox:nth-child(3) .footerBoxIn {
+    padding-left: 0;
+  }
+  .footerBox:nth-child(3) {
+    margin-left: 0;
+  }
+  .footerBoxIn li a {
+    word-break: break-all;
+  }
+  .footerMain {
+    padding: 5rem 0;
+  }
+  .font_18 {
+    font-size: 1.6rem;
+  }
+  .font_26 {
+    font-size: 2.3rem;
+  }
+  .font_40 {
+    font-size: 3rem;
+  }
+  .font_22 {
+    font-size: 2rem;
+  }
+  .need-to-khow-in-box h4 span {
+    font-size: 14px;
+  }
+  .font_60 {
+    font-size: 3rem;
+  }
+  .need-to-khow-in-box {
+    min-height: auto;
+  }
+  .shopping-bag {
+    display: none;
+  }
+  .methodin-box {
+    height: 180px;
+  }
+  .conventional-home .row {
+    min-height: 300px;
+    padding: 6rem 0;
+  }
+  .call-contact {
+    margin-left: auto;
+  }
+
+  .mobile-visible .applynow {
+    width: 100%;
+    background-color: #e6212e;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+  }
+  .mobile-visible .contactinfo {
+    display: block;
+  }
+  .mobile-visible .contactinfo .callicon {
+    display: none;
+  }
+  .mobile-visible .contactinfo span.shoppingttle {
+    color: #fff;
+  }
+  .mobile-visible .contactinfo span.iteamdisplay {
+    color: #fff;
+  }
+  .mobile-visible .contactinfo .carttext {
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+  }
+  .information-visa-in {
+    padding: 30px 0;
+  }
+  .service-box {
+    margin-bottom: 15px;
+  }
+  .scolershipbanner .bannerContent h3 br {
+    display: none;
+  }
+  .scolershipbanner .bannerContent h5 br {
+    display: none;
+  }
+  .flagul li {
+    margin-right: 5px;
+  }
+  .about-home-lft-text h3 {
+    line-height: 33px;
+  }
+  .mb15 {
+    margin-bottom: 15px;
+  }
+  .popular-country-section .bannerContent h3 {
+    line-height: 35px;
+  }
+  .testimoni {
+    margin-bottom: 15px;
+  }
+  .foooter-logo {
+    margin-bottom: 20px;
+  }
+  .footerlogotext {
+    margin-bottom: 20px;
+  }
+  .footer-logo-area-in {
+    padding: 60px 15px 25px 15px;
+  }
+  .followus {
+    margin-bottom: 20px;
+  }
+  .calluspanel {
+    position: relative;
+  }
+  .services-section {
+    padding: 80px 0 65px 0;
+  }
+  .services-section h2 {
+    line-height: 35px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+  .testimonials-section {
+    padding: 60px 0 80px 0;
+  }
+  .copyright-in {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .headerTop:after {
+    top: 32px;
+  }
+  .about-home-lft-text {
+    padding-right: 0;
+  }
+  .flagul li img {
+    width: 50px;
+  }
+  .font_52 {
+    font-size: 4.8rem;
+  }
+  .banner .bannerContent h1 {
+    line-height: 42px;
+  }
+  .information-visa-in {
+    padding: 15px 0;
+  }
+  .information-visa-in {
+    width: 50%;
+  }
+  .services-section {
+    padding: 40px 0 25px 0;
+  }
+  .services-text a {
+    font-size: 14px;
+  }
+  .scolershipbanner .overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  .scolershipbanner .bannerContent h5 {
+    font-size: 1.5rem;
+  }
+  .font_33 {
+    font-size: 2.2rem;
+  }
+  .about-section-home {
+    padding: 40px 0;
+  }
+  .right-ab-img {
+    margin-top: 20px;
+  }
+  .about-home-lft-text h3 {
+    line-height: 28px;
+    margin: 10px 0;
+  }
+  .about-home-lft-text p {
+    margin-bottom: 0;
+  }
+  .right-ab-img:after {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+  .client-section-in {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  .country-visa-area {
+    margin-bottom: 40px;
+  }
+  .testimonials-section {
+    padding: 40px 0 80px 0;
+  }
+  .sub-txt h4 {
+    margin-bottom: 15px;
+  }
+  .calluspanel {
+    height: 75px;
+  }
+  .ftr-rgt-link-pnl {
+    padding: 40px 15px 0 15px;
+  }
+  .font_18 {
+    font-size: 1.8rem;
+  }
+  .topMenu {
+    top: 10.2rem;
+    height: calc(100vh - 10.2rem);
+  }
+  .sub-txt h4 br {
+    display: none;
+  }
+  .client-section {
+    padding-bottom: 25px;
+  }
+  .opentime h5 span {
+    font-size: 13px;
+  }
+  .opentime h5 {
+    font-size: 13px;
+  }
+  .location-rght-apply .location {
+    font-size: 13px;
+  }
+
+  .bannerContent,
+  .meetBossSec-1,
+  .meetBossSec-2,
+  .takeTour,
+  .homeKitRow,
+  .customizeIt,
+  .values,
+  .ftrGreenBox {
+    text-align: center !important;
+  }
+  .meetBossBox {
+    margin-bottom: 4rem;
+  }
+  .meetBossBox:last-child {
+    margin-bottom: 0;
+  }
+  .meetBossBox::before {
+    display: none;
+  }
+  .meetBossBoxIn {
+    padding: 0;
+  }
+  .meetBossBoxIcon {
+    margin-bottom: 1.5rem;
+  }
+  .homeKitcontent {
+    padding: 0;
+  }
+  .customizeItBg {
+    transform: none;
+    left: auto;
+    top: auto;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+    right: auto;
+    max-width: calc(100% - 5rem);
+    height: auto;
+  }
+  .customizeIt .cmnBtn {
+    margin-top: 3rem;
+  }
+  .values {
+    padding: 5rem 0;
+  }
+  .valuesBoxIn {
+    flex-direction: column;
+    height: auto;
+  }
+  .valuesBoxPic {
+    height: 30rem;
+  }
+  .valuesBoxContent {
+    height: auto;
+    padding: 3rem 1.5rem;
+    margin: 0;
+  }
+  .valuesBox:nth-child(2n) .valuesBoxContent {
+    margin: 0;
+  }
+  .gallaryBoxIn {
+    height: 17rem;
+  }
+
+  .ftrGreenBoxInIcon {
+    display: inline-flex;
+    margin-bottom: 2rem;
+  }
+  .ftrGreenBoxIn {
+    display: block !important;
+  }
+  .ftrGreenBoxInText {
+    width: 100%;
+    padding: 0;
+  }
+  .footerGreen {
+    padding: 4rem 0;
+  }
+  .footerBox {
+    width: 100%;
+  }
+  .footerBoxIn {
+    text-align: center;
+    border: 1px solid #3c3c3c;
+    padding: 2rem;
+  }
+  .footerBoxLogo .footerBoxIn {
+    border: none;
+    padding: 0;
+  }
+
+  .ul-log {
+    display: flex;
+  }
+  .contraction_method_section .container .row .methodBox:first-child::before {
+    left: 50%;
+    bottom: -5rem;
+    transform: translateX(-50%);
+    top: inherit;
+  }
+  .contraction_method_section .container .row .methodBox:nth-child(2)::before {
+    left: 50%;
+    bottom: -5rem;
+    transform: translateX(-50%);
+    top: inherit;
+  }
+  .contraction_method_section .container > .row {
+    margin: -1rem 0rem -1rem 0rem;
+  }
+  .methodBox {
+    padding: 0;
+    margin-bottom: 9rem;
+  }
+  .contraction_method_section .row .methodBox:last-child {
+    margin-bottom: 0rem;
+  }
+  .boss-benefits-box {
+    width: 50%;
+  }
+  .boss_benefit {
+    padding: 10rem 2rem;
+  }
+  .closerlook {
+    width: 100%;
+    position: relative;
+  }
+  .closer_look_pnl .row {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+  .prints_area_in {
+    width: 100%;
+  }
+  .prints_area_in_img {
+    height: 250px;
+  }
+  .prints_area .row {
+    min-height: 175px;
+    padding: 5rem 0;
+  }
+  .prints_area {
+    height: auto;
+  }
+  .tradinl-bnnr {
+    height: 200px;
+  }
+  .conventional-home .row {
+    min-height: 200px;
+    padding: 4rem 0;
+  }
+  .conventional-home-in h4 {
+    padding-bottom: 2rem;
+  }
+  .banner .bannerContent h5 br {
+    display: none;
+  }
+  .banner {
+    padding: 60px 0;
+  }
+  .services-section h2 br {
+    display: none;
+  }
+  .services-section h2 {
+    line-height: 28px;
+  }
+  .font_40 {
+    font-size: 2.4rem;
+  }
+  .services-text p {
+    color: #6f6f6f;
+    font-size: 1.5rem;
+  }
+  .testimonials-section h3 {
+    margin-bottom: 30px;
+  }
+  .popular-country-section {
+    padding: 60px 0 100px 0;
+  }
+  .calno {
+    font-size: 24px;
+  }
+  .calusicon {
+    margin-right: 15px;
+  }
+  .calusicon img {
+    width: 35px;
+  }
+  .calluspanel {
+    height: 60px;
+  }
+  .news-lttr input {
+    font-size: 12px;
+    height: 40px;
+  }
+  .sub-button {
+    font-size: 13px;
+    padding: 6px 15px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .banner .bannerContent h1 {
+    line-height: 34px;
+  }
+  .font_52 {
+    font-size: 3.4rem;
+  }
+  .banner {
+    padding: 40px 0;
+  }
+  .font_20 {
+    font-size: 1.6rem;
+  }
+  .visainfoimg {
+    margin-right: 10px;
+  }
+  .visainfoimg img {
+    width: 40px;
+  }
+  .scolershipbanner {
+    padding: 40px 0;
+  }
+  .popular-country-section {
+    padding: 40px 0 80px 0;
+  }
+  .popular-country-section .bannerContent h3 {
+    line-height: 29px;
+  }
+  .calno {
+    font-size: 20px;
+  }
+  .copyright-in {
+    font-size: 14px;
+  }
+  .sub-txt h4 {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+}

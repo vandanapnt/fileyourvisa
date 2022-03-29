@@ -61,7 +61,9 @@
                             @csrf
 
                             <!-- redirectTo URL -->
-                            <input type="hidden" name="redirectTo" value="{{ request()->redirectTo }}">
+                            <input type="hidden" name="redirectTo" value="{{ url('admin') }}">
+
+                            <!-- request()->redirectTo -->
 
                             <div class="form-group">
                                 <div class="input-group input-group-merge input-group-alternative mb-3">
