@@ -61,7 +61,7 @@
                             @csrf
 
                             <!-- redirectTo URL -->
-                            <input type="hidden" name="redirectTo" value="{{ url('admin') }}">
+                            <input type="hidden" name="redirectTo" value="{{ url('controlroom') }}">
 
                             <!-- request()->redirectTo -->
 

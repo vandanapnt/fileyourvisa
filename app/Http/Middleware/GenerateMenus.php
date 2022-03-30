@@ -143,7 +143,7 @@ class GenerateMenus
             ]);
 
         //Services
-             $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Services', [
+             $menu->add('<i class="c-sidebar-nav-icon cil-list-numbered"></i> Services', [
                 'route' => 'backend.services.index',
                 'class' => 'c-sidebar-nav-item',
             ])
@@ -156,6 +156,48 @@ class GenerateMenus
                 'class' => 'c-sidebar-nav-link',
             ]);
 
+
+          //Faq
+          $faqsControl = $menu->add('<i class="c-sidebar-nav-icon cil-list-numbered"></i> FAQs', [
+               
+                'class' => 'c-sidebar-nav-dropdown',
+            ])
+            ->data([
+                'order'         => 107,
+                'activematches' => 'admin/faqs*',
+                'permission'    => [],
+            ]);
+            $faqsControl->link->attr([
+                'class' => 'c-sidebar-nav-dropdown-toggle',
+                'href' => '#',
+            ]);       
+
+
+           // Submenu: Faqs Category
+           $faqsControl->add('<i class="c-sidebar-nav-icon cil-list"></i> FAQs Categories', [
+                    'route' => 'backend.faqscategory.index',
+                    'class' => 'nav-item',
+                ])
+                ->data([
+                    'order'         => 108,
+                    'activematches' => 'admin/faqscategory*',
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
+
+            // Submenu: Faqs 
+                $faqsControl->add('<i class="c-sidebar-nav-icon cil-list"></i> FAQs List', [
+                    'route' => 'backend.faqs.index',
+                    'class' => 'nav-item',
+                ])
+                ->data([
+                    'order'         => 108,
+                    'activematches' => 'admin/faqs*',
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
 
             // Log Viewer
             // Log Viewer Dropdown

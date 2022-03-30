@@ -115,7 +115,7 @@ class RolesController extends Controller
 
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-        return redirect("admin/$module_name")->with('flash_success', "$module_name added!");
+        return redirect("controlroom/$module_name")->with('flash_success', "$module_name added!");
     }
 
     /**
@@ -216,7 +216,7 @@ class RolesController extends Controller
 
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-        return redirect("admin/$module_name");
+        return redirect("controlroom/$module_name");
     }
 
     /**

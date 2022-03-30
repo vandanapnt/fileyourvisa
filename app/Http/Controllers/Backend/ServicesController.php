@@ -185,7 +185,7 @@ class ServicesController extends Controller
        
        // Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-        return redirect("admin/$module_name");
+        return redirect("controlroom/$module_name");
     
     }
 
@@ -225,7 +225,7 @@ class ServicesController extends Controller
        
         $Service->update();
         Flash::success("<i class='fas fa-check'></i> Service Updated")->important();
-        return redirect("admin/$module_name");
+        return redirect("controlroom/$module_name");
     }   
     /**
      * Delete  the Services
@@ -251,7 +251,7 @@ class ServicesController extends Controller
         $$module_name_singular->delete();
        
         flash('<i class="fas fa-check"></i> Service Successfully Deleted!')->success();
-        return redirect("admin/$module_name");
+        return redirect("controlroom/$module_name");
     }   
     
 }

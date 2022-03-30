@@ -29,7 +29,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 * These routes need view-backend permission
 * --------------------------------------------------------------------
 */
-Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.', 'middleware' => ['auth', 'can:view_backend']], function () {
+Route::group(['namespace' => 'Backend', 'prefix' => 'controlroom', 'as' => 'backend.', 'middleware' => ['auth', 'can:view_backend']], function () {
 
     Route::get('/', 'BackendController@index')->name('home');
     Route::get('dashboard', 'BackendController@index')->name('dashboard');
@@ -137,6 +137,34 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
    $controller_name = 'AgentController';
 
    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);   
+
+   
+   
+   /*
+    *
+    *  FAQs Routes
+    *
+    * ---------------------------------------------------------------------
+    */
+    $module_name = 'faqs';
+    $controller_name = 'FaqController';
+    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
+    Route::get("$module_name/create", ['as' => "$module_name.create", 'uses' => "$controller_name@create"]);
+    Route::post("$module_name", "$controller_name@store")->name("$module_name.store");
+    Route::get("$module_name/{id}/edit", ['as' => "$module_name.edit", 'uses' => "$controller_name@edit"]);
+    Route::patch("$module_name/{id}", "$controller_name@update")->name("$module_name.update");
+    Route::delete("$module_name/{id}", "$controller_name@destroy")->name("$module_name.destroy");
+
+
+    $module_name = 'faqscategory';
+    $controller_name = 'FaqCategoryController';
+    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
+    Route::get("$module_name/create", ['as' => "$module_name.create", 'uses' => "$controller_name@create"]);
+    Route::post("$module_name", "$controller_name@store")->name("$module_name.store");
+    Route::get("$module_name/{id}/edit", ['as' => "$module_name.edit", 'uses' => "$controller_name@edit"]);
+    Route::patch("$module_name/{id}", "$controller_name@update")->name("$module_name.update");
+    Route::delete("$module_name/{id}", "$controller_name@destroy")->name("$module_name.destroy");
+   
    
 
 });

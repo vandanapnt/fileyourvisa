@@ -325,7 +325,7 @@ class UserController extends Controller
         if ($id == 1) {
             $user->syncRoles(['administrator']);
 
-            return redirect("admin/$module_name")->with('flash_success', 'Update successful!');
+            return redirect("controlroom/$module_name")->with('flash_success', 'Update successful!');
         }
 
         $roles = $request['roles'];
@@ -347,7 +347,7 @@ class UserController extends Controller
             $$module_name_singular->syncPermissions($permissions);
         }
 
-        return redirect("admin/$module_name")->with('flash_success', 'Update successful!');
+        return redirect("controlroom/$module_name")->with('flash_success', 'Update successful!');
     }
 
     /**

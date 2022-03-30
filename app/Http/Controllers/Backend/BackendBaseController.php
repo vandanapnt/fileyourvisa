@@ -184,7 +184,7 @@ class BackendBaseController extends Controller
 
         logUserAccess($module_title.' '.$module_action.' | Id: '.$$module_name_singular->id);
 
-        return redirect("admin/$module_name");
+        return redirect("controlroom/$module_name");
     }
 
     /**
@@ -299,7 +299,7 @@ class BackendBaseController extends Controller
 
         logUserAccess($module_title.' '.$module_action.' | Id: '.$$module_name_singular->id);
 
-        return redirect("admin/$module_name");
+        return redirect("controlroom/$module_name");
     }
 
     /**
@@ -355,6 +355,6 @@ class BackendBaseController extends Controller
 
         logUserAccess($module_title.' '.$module_action.' | Id: '.$$module_name_singular->id);
 
-        return redirect("admin/$module_name");
+        return redirect("controlroom/$module_name");
     }
 }

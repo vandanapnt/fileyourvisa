@@ -34,6 +34,8 @@
 
     @livewireStyles
     
+    <script src="{!! url('tinymce/tinymce.min.js') !!}"></script>
+
 </head>
 <body class="c-app">
 
