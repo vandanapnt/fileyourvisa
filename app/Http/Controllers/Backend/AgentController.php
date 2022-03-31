@@ -65,15 +65,14 @@ class AgentController extends Controller
         $page_heading = ucfirst($module_title);
         $title = $page_heading.' '.ucfirst($module_action);
        
-        $$module_name = $module_model::paginate();
+        //$$module_name = $module_model::paginate();
 
-        Log::info("'$title' viewed by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        //Log::info("'$title' viewed by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
        
         return view(
             "backend.$module_path.index",
             compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title')
         );
-
         
     }
 
@@ -88,7 +87,7 @@ class AgentController extends Controller
 
         $module_action = 'List';
 
-        //$$module_name = $module_model::select('id', 'name', 'username', 'email', 'email_verified_at', 'updated_at', 'status');
+        $$module_name = $module_model::select('id', 'name', 'username', 'email', 'email_verified_at', 'updated_at', 'status');
 
         $data = $$module_name;
 
@@ -290,12 +289,13 @@ class AgentController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
         $userprofile = Userprofile::where('user_id', $$module_name_singular->id)->first();
+        $user = $$module_name_singular;
 
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
         return view(
             "backend.$module_name.show",
-            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'userprofile')
+            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'userprofile' ,'user')
         );
     }
 
@@ -320,14 +320,19 @@ class AgentController extends Controller
 
         if ($$module_name_singular) {
             $userprofile = Userprofile::where('user_id', $id)->first();
+            $user = $$module_name_singular;
+            $userRoles = $$module_name_singular->roles->pluck('name')->all();
+            $userPermissions = $$module_name_singular->permissions->pluck('name')->all();
+
         } else {
             Log::error('UserProfile Exception for Username: '.$username);
             abort(404);
         }
 
+        
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-        return view("backend.$module_name.profile", compact('module_name', 'module_name_singular', "$module_name_singular", 'module_icon', 'module_action', 'module_title', 'userprofile'));
+        return view("backend.$module_name.profile", compact('module_name', 'module_name_singular', "$module_name_singular", 'module_icon', 'module_action', 'module_title', 'userprofile','user','userRoles','userPermissions'));
     }
 
     /**
@@ -354,12 +359,13 @@ class AgentController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
         $userprofile = Userprofile::where('user_id', $$module_name_singular->id)->first();
+        $user = $$module_name_singular;
 
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
         return view(
             "backend.$module_name.profileEdit",
-            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'userprofile')
+            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'userprofile', 'user')
         );
     }
 
@@ -421,7 +427,7 @@ class AgentController extends Controller
 
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-        return redirect(route('backend.users.profile', $$module_name_singular->id));
+        return redirect(route('backend.agents.profile', $$module_name_singular->id));
     }
 
     /**
@@ -583,6 +589,7 @@ class AgentController extends Controller
         $userRoles = $$module_name_singular->roles->pluck('name')->all();
         $userPermissions = $$module_name_singular->permissions->pluck('name')->all();
 
+        $user =  $$module_name_singular;
         $roles = Role::get();
         $permissions = Permission::select('name', 'id')->get();
 
@@ -590,7 +597,7 @@ class AgentController extends Controller
 
         return view(
             "backend.$module_name.edit",
-            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'roles', 'permissions', 'userRoles', 'userPermissions')
+            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'roles', 'permissions', 'userRoles', 'userPermissions','user')
         );
     }
 

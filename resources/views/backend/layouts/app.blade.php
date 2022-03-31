@@ -16,10 +16,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!--<title>@yield('title') | {{ config('app.name') }}</title>-->
-
-    <title> FileYourVisa</title>
-
+    <title>@yield('title') | {{ config('app.name') }}</title>
+    
     @stack('before-styles')
 
     <link rel="stylesheet" href="{{ mix('css/backend.css') }}">

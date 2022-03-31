@@ -24,7 +24,8 @@
 
             <div class="col-5">
                 <div class="float-right">
-                    <x-buttons.create route='{{ route("backend.users.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}" />
+                 <!-- 
+                   <x-buttons.create route='{{ route("backend.users.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}" />
 
                     <div class="btn-group" role="group" aria-label="Toolbar button groups">
                         <div class="btn-group" role="group">
@@ -38,15 +39,18 @@
                             </div>
                         </div>
                     </div>
+                  -->
                 </div>
             </div>
             <!--/.col-->
         </div>
         <!--/.row-->
+       
+   <!-- agent list -->
+   
+   <livewire:agents-index />
 
-
-        <livewire:users-index />
-
+<!-- end agent list-->
         
     </div>
     <div class="card-footer">
