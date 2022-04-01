@@ -28,7 +28,7 @@
             <!--/.col-->
             <div class="col-4">
                 <div class="float-right">
-                    <a href="{{ route("backend.agents.profileEdit", $user->id) }}" class="btn btn-primary mt-1 btn-sm" data-toggle="tooltip" title="Edit {{ Str::singular($module_name) }} Profile"><i class="fas fa-wrench"></i> Edit</a>
+                    <a href="{{ route("backend.candidates.profileEdit", $user->id) }}" class="btn btn-primary mt-1 btn-sm" data-toggle="tooltip" title="Edit {{ Str::singular($module_name) }} Profile"><i class="fas fa-wrench"></i> Edit</a>
                 </div>
             </div>
             <!--/.col-->
@@ -99,7 +99,7 @@
                        <!-- <tr>
                             <th>{{ __('labels.backend.users.fields.password') }}</th>
                             <td>
-                                <a href="{{ route('backend.agents.changeProfilePassword', $user->id) }}" class="btn btn-outline-primary btn-sm">Change password</a>
+                                <a href="{{ route('backend.candidates.changeProfilePassword', $user->id) }}" class="btn btn-outline-primary btn-sm">Change password</a>
                             </td>
                         </tr>-->
 

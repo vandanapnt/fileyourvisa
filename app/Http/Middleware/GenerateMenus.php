@@ -142,13 +142,41 @@ class GenerateMenus
                 'class' => 'c-sidebar-nav-link',
             ]);
 
+        // Candidates
+            $menu->add('<i class="c-sidebar-nav-icon cil-people"></i> Candidates', [
+                'route' => 'backend.candidates.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+            ->data([
+                'order'         => 107,
+                'activematches' => 'admin/candidates*',
+                'permission'    => [],
+            ])
+            ->link->attr([
+                'class' => 'c-sidebar-nav-link',
+            ]);
+
+        // Employee
+            $menu->add('<i class="c-sidebar-nav-icon cil-people"></i> Employees', [
+                'route' => 'backend.employees.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+            ->data([
+                'order'         => 107,
+                'activematches' => 'admin/employees*',
+                'permission'    => [],
+            ])
+            ->link->attr([
+                'class' => 'c-sidebar-nav-link',
+            ]); 
+            
         //Services
              $menu->add('<i class="c-sidebar-nav-icon cil-list-numbered"></i> Services', [
                 'route' => 'backend.services.index',
                 'class' => 'c-sidebar-nav-item',
             ])
             ->data([
-                'order'         => 107,
+                'order'         => 108,
                 'activematches' => 'admin/services*',
                 'permission'    => [],
             ])
@@ -199,6 +227,8 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
+           
+      /*      
             // Log Viewer
             // Log Viewer Dropdown
             $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-list-rich"></i> Log Viewer', [
@@ -241,6 +271,8 @@ class GenerateMenus
             ->link->attr([
                 'class' => 'c-sidebar-nav-link',
             ]);
+     
+        */
 
          // Access Permission Check
             $menu->filter(function ($item) {
