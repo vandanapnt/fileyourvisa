@@ -427,7 +427,7 @@ class CandidateController extends Controller
 
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-        return redirect(route('backend.agents.profile', $$module_name_singular->id));
+        return redirect(route('backend.candidates.profile', $$module_name_singular->id));
     }
 
     /**
