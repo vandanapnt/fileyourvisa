@@ -28,7 +28,7 @@
             <!--/.col-->
             <div class="col-4">
                 <div class="float-right">
-                    <a href="{{ route("backend.users.profileEdit", $user->id) }}" class="btn btn-primary mt-1 btn-sm" data-toggle="tooltip" title="Edit {{ Str::singular($module_name) }} Profile"><i class="fas fa-wrench"></i> Edit</a>
+                    <a href="{{ route('backend.consultants.profileEdit', $user->id) }}" class="btn btn-primary mt-1 btn-sm" data-toggle="tooltip" title="Edit {{ Str::singular($module_name) }} Profile"><i class="fas fa-wrench"></i> Edit</a>
                 </div>
             </div>
             <!--/.col-->
@@ -99,7 +99,7 @@
                         <tr>
                             <th>{{ __('labels.backend.users.fields.password') }}</th>
                             <td>
-                                <a href="{{ route('backend.users.changeProfilePassword', $user->id) }}" class="btn btn-outline-primary btn-sm">Change password</a>
+                                <a href="{{ route('backend.consultants.changePassword', $user->id) }}" class="btn btn-outline-primary btn-sm">Change password</a>
                             </td>
                         </tr>
 
@@ -128,9 +128,9 @@
                         <tr>
                             <th>{{ __('labels.backend.users.fields.roles') }}</th>
                             <td>
-                                @if($user->roles()->count() > 0)
+                                @if($user->getRoleNames()->count() > 0)
                                     <ul>
-                                        @foreach ($user->roles() as $role)
+                                        @foreach ($user->getRoleNames() as $role)
                                         <li>{{ ucwords($role) }}</li>
                                         @endforeach
                                     </ul>
@@ -138,20 +138,18 @@
                             </td>
 
                         </tr>
-                       
                        <!-- <tr>
                             <th>{{ __('labels.backend.users.fields.permissions') }}</th>
                             <td>
-                                @if($user->permissions()->count() > 0)
+                                @if(!empty($userPermissions))
                                     <ul>
-                                        @foreach ($user->permissions() as $permission)
-                                        <li>{{ $permission['name'] }}</li>
+                                        @foreach ($userPermissions as $k=> $permission)
+                                        <li>{{ $permission }}</li>
                                         @endforeach
                                     </ul>
                                 @endif
                             </td>
-                        </tr>
-                        -->
+                        </tr>-->
 
                         <tr>
                             <th>{{ __('labels.backend.users.fields.created_at') }}</th>

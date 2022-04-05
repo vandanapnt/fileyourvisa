@@ -143,7 +143,7 @@
                                                 </div>
                                             </div>
                                             <div class="card-body">
-                                                @if ($role->id != 1)
+                                            {{--  @if ($role->id != 1)
                                                 @if ($role->permissions->count())
                                                 @foreach ($role->permissions as $permission)
                                                 <i class="far fa-check-circle mr-1"></i>{{ $permission->name }}&nbsp;
@@ -154,6 +154,7 @@
                                                 @else
                                                 @lang('All Permissions')
                                                 @endif
+                                             --}} 
                                             </div>
                                         </div>
                                         <!--card-->
@@ -162,6 +163,7 @@
                                     </div>
                                 </div>
                             </div>
+                        <!--
                             <div class="col-12 col-sm-5">
                                 <div class="card card-accent-primary">
                                     <div class="card-header">
@@ -178,6 +180,7 @@
                                     </div>
                                 </div>
                             </div>
+                             --->
                         </div>
                     </div>
                 </div>

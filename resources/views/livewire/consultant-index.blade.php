@@ -10,8 +10,8 @@
                         <th>{{ __('labels.backend.users.fields.email') }}</th>
                         <th>{{ __('labels.backend.users.fields.status') }}</th>
                         <th>{{ __('labels.backend.users.fields.roles') }}</th>
-                        <!--<th>{{ __('labels.backend.users.fields.permissions') }}</th>
-                        <th>{{ __('labels.backend.users.fields.social') }}</th>-->
+                    <!--<th>{{ __('labels.backend.users.fields.permissions') }}</th>
+                      <th>{{ __('labels.backend.users.fields.social') }}</th> -->
 
                         <th class="text-right">{{ __('labels.backend.action') }}</th>
                     </tr>
@@ -21,7 +21,7 @@
                     <tr>
                         <td>
                             <strong>
-                                <a href="{{route('backend.candidates.show', $user->id)}}">
+                                <a href="{{route('backend.employees.show', $user->id)}}">
                                     {{ $user->name }}
                                 </a>
                             </strong>
@@ -40,7 +40,7 @@
                             </ul>
                             @endif
                         </td>
-                        <!--<td>
+                       <!--  <td>
                             @if($user->getAllPermissions()->count() > 0)
                             <ul>
                                 @foreach ($user->getDirectPermissions() as $permission)
@@ -49,7 +49,7 @@
                             </ul>
                             @endif
                         </td>
-                        <td>
+                       <td>
                             <ul class="list-unstyled">
                                 @foreach ($user->providers as $provider)
                                 <li>
@@ -57,22 +57,22 @@
                                 </li>
                                 @endforeach
                             </ul>
-                        </td> -->
-
+                        </td> 
+                        -->
                         <td class="text-right">
-                            <a href="{{route('backend.candidates.show', $user)}}" class="btn btn-success btn-sm mt-1" data-toggle="tooltip" title="{{__('labels.backend.show')}}"><i class="fas fa-desktop"></i></a>
+                            <a href="{{route('backend.consultants.show', $user)}}" class="btn btn-success btn-sm mt-1" data-toggle="tooltip" title="{{__('labels.backend.show')}}"><i class="fas fa-desktop"></i></a>
                             @can('edit_users')
-                            <a href="{{route('backend.candidates.edit', $user)}}" class="btn btn-primary btn-sm mt-1" data-toggle="tooltip" title="{{__('labels.backend.edit')}}"><i class="fas fa-wrench"></i></a>
-                            {{-- <a href="{{route('backend.candidates.changePassword', $user)}}" class="btn btn-info btn-sm mt-1" data-toggle="tooltip" title="{{__('labels.backend.changePassword')}}"><i class="fas fa-key"></i></a> --}}
+                            <a href="{{route('backend.consultants.edit', $user)}}" class="btn btn-primary btn-sm mt-1" data-toggle="tooltip" title="{{__('labels.backend.edit')}}"><i class="fas fa-wrench"></i></a>
+                            {{-- <a href="{{route('backend.consultants.changePassword', $user)}}" class="btn btn-info btn-sm mt-1" data-toggle="tooltip" title="{{__('labels.backend.changePassword')}}"><i class="fas fa-key"></i></a> --}}
                             @if ($user->status != 2)
-                            <a href="{{route('backend.candidates.block', $user)}}" class="btn btn-danger btn-sm mt-1" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.block')}}" data-confirm="Are you sure?"><i class="fas fa-ban"></i></a>
+                            <a href="{{route('backend.consultants.block', $user)}}" class="btn btn-danger btn-sm mt-1" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.block')}}" data-confirm="Are you sure?"><i class="fas fa-ban"></i></a>
                             @endif
                             @if ($user->status == 2)
-                            <a href="{{route('backend.candidates.unblock', $user)}}" class="btn btn-info btn-sm mt-1" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.unblock')}}" data-confirm="Are you sure?"><i class="fas fa-check"></i></a>
+                            <a href="{{route('backend.consultants.unblock', $user)}}" class="btn btn-info btn-sm mt-1" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.unblock')}}" data-confirm="Are you sure?"><i class="fas fa-check"></i></a>
                             @endif
-                            <a href="{{route('backend.candidates.destroy', $user)}}" class="btn btn-danger btn-sm mt-1" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
+                            <a href="{{route('backend.consultants.destroy', $user)}}" class="btn btn-danger btn-sm mt-1" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
                             {{--  @if ($user->email_verified_at == null)
-                            <a href="{{route('backend.candidates.emailConfirmationResend', $user->id)}}" class="btn btn-primary btn-sm mt-1" data-toggle="tooltip" title="Send Confirmation Email"><i class="fas fa-envelope"></i></a>
+                            <a href="{{route('backend.consultants.emailConfirmationResend', $user->id)}}" class="btn btn-primary btn-sm mt-1" data-toggle="tooltip" title="Send Confirmation Email"><i class="fas fa-envelope"></i></a>
                             @endif
                             --}}
 

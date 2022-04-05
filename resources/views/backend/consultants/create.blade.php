@@ -40,7 +40,7 @@
         <div class="row mt-4">
             <div class="col">
 
-                {{ html()->form('POST', route('backend.employees.store'))->class('form-horizontal')->open() }}
+                {{ html()->form('POST', route('backend.consultants.store'))->class('form-horizontal')->open() }}
                 {{ csrf_field() }}
 
                 <div class="form-group row">

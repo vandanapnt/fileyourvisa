@@ -10,8 +10,8 @@
                         <th>{{ __('labels.backend.users.fields.email') }}</th>
                         <th>{{ __('labels.backend.users.fields.status') }}</th>
                         <th>{{ __('labels.backend.users.fields.roles') }}</th>
-                        <th>{{ __('labels.backend.users.fields.permissions') }}</th>
-                        <th>{{ __('labels.backend.users.fields.social') }}</th>
+                        <!--<th>{{ __('labels.backend.users.fields.permissions') }}</th>
+                        <th>{{ __('labels.backend.users.fields.social') }}</th>-->
 
                         <th class="text-right">{{ __('labels.backend.action') }}</th>
                     </tr>
@@ -40,7 +40,7 @@
                             </ul>
                             @endif
                         </td>
-                        <td>
+                        <!--<td>
                             @if($user->getAllPermissions()->count() > 0)
                             <ul>
                                 @foreach ($user->getDirectPermissions() as $permission)
@@ -57,7 +57,7 @@
                                 </li>
                                 @endforeach
                             </ul>
-                        </td>
+                        </td>-->
 
                         <td class="text-right">
                             <a href="{{route('backend.users.show', $user)}}" class="btn btn-success btn-sm mt-1" data-toggle="tooltip" title="{{__('labels.backend.show')}}"><i class="fas fa-desktop"></i></a>

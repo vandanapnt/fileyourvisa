@@ -196,24 +196,25 @@ class RolesController extends Controller
 
         $this->validate($request, [
             'name'        => 'required|max:20|unique:roles,name,'.$id,
-            'permissions' => 'required',
+            //'permissions' => 'required',
         ]);
 
         $input = $request->except(['permissions']);
         $permissions = $request['permissions'];
         $$module_name_singular->fill($input)->save();
 
-        $p_all = Permission::all(); //Get all permissions
+        /*
+          $p_all = Permission::all(); //Get all permissions
 
-        foreach ($p_all as $p) {
-            $$module_name_singular->revokePermissionTo($p); //Remove all permissions associated with role
-        }
+            foreach ($p_all as $p) {
+                $$module_name_singular->revokePermissionTo($p); //Remove all permissions associated with role
+            }
 
-        foreach ($permissions as $permission) {
-            $p = Permission::where('name', '=', $permission)->firstOrFail(); //Get corresponding form //permission in db
-            $$module_name_singular->givePermissionTo($p);  //Assign permission to role
-        }
-
+            foreach ($permissions as $permission) {
+                $p = Permission::where('name', '=', $permission)->firstOrFail(); //Get corresponding form //permission in db
+                $$module_name_singular->givePermissionTo($p);  //Assign permission to role
+            }
+        */
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
         return redirect("controlroom/$module_name");
@@ -268,7 +269,8 @@ class RolesController extends Controller
 
                 Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-                return redirect()->back();
+                //return redirect()->back();
+                return redirect("controlroom/$module_name");
             }
         } catch (\Exception $e) {
             Log::error($e);

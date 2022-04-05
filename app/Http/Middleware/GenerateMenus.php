@@ -67,8 +67,9 @@ class GenerateMenus
             ->link->attr([
                 'class' => 'c-sidebar-nav-link',
             ]);
-
-            // Backup
+                     
+        /*
+          // Backup
             $menu->add('<i class="c-sidebar-nav-icon fas fa-archive"></i> Backups', [
                 'route' => 'backend.backups.index',
                 'class' => 'nav-item',
@@ -82,6 +83,7 @@ class GenerateMenus
                 'class' => 'c-sidebar-nav-link',
             ]);
 
+          */  
             // Access Control Dropdown
             $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> Access Control', [
                 'class' => 'c-sidebar-nav-dropdown',
@@ -164,6 +166,20 @@ class GenerateMenus
             ->data([
                 'order'         => 107,
                 'activematches' => 'admin/employees*',
+                'permission'    => [],
+            ])
+            ->link->attr([
+                'class' => 'c-sidebar-nav-link',
+            ]); 
+
+         // Consultant
+            $menu->add('<i class="c-sidebar-nav-icon cil-people"></i> Consultants', [
+                'route' => 'backend.consultants.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+            ->data([
+                'order'         => 107,
+                'activematches' => 'admin/consultants*',
                 'permission'    => [],
             ])
             ->link->attr([

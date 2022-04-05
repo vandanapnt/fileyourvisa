@@ -36,7 +36,7 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->modelForm($user, 'PATCH', route('backend.candidates.update', $user->id))->class('form-horizontal')->open() }}
+                {{ html()->modelForm($user, 'PATCH', route('backend.consultants.update', $user->id))->class('form-horizontal')->open() }}
 
                     <div class="form-group row">
                         {{ html()->label(__('labels.backend.users.fields.email'))->class('col-sm-2 form-control-label')->for('email') }}
@@ -50,21 +50,21 @@
                         </div>
                     </div><!--form-group-->
 
-                 <!--   <div class="form-group row">
+                   <div class="form-group row">
                         {{ html()->label(__('labels.backend.users.fields.password'))->class('col-5 col-sm-2 form-control-label')->for('password') }}
 
                         <div class="col-7 col-sm-10">
-                            <a href="{{ route('backend.candidates.changePassword', $user->id) }}" class="btn btn-outline-primary btn-sm"><i class="fas fa-key"></i> Change password</a>
+                            <a href="{{ route('backend.consultants.changePassword', $user->id) }}" class="btn btn-outline-primary btn-sm"><i class="fas fa-key"></i> Change password</a>
                         </div>
                     </div>
-                    -->
+                    
                     <!--form-group-->
 
                     <div class="form-group row">
                         {{ html()->label('Profile')->class('col-5 col-sm-2 form-control-label')->for('profile') }}
 
                         <div class="col-7 col-sm-10">
-                            <a href="{{ route("backend.candidates.profileEdit", $user->id) }}" class="btn btn-outline-primary btn-sm"><i class="fas fa-user"></i> Update Profile</a>
+                            <a href="{{ route('backend.consultants.profileEdit', $user->id) }}" class="btn btn-outline-primary btn-sm"><i class="fas fa-user"></i> Update Profile</a>
                         </div>
                     </div><!--form-group-->
 
@@ -73,7 +73,7 @@
 
                         <div class="col-7 col-sm-10">
                             @if ($user->email_verified_at == null)
-                            <!--<a href="{{route('backend.candidates.emailConfirmationResend', $user->id)}}" class="btn btn-outline-primary btn-sm " data-toggle="tooltip" title="Send Confirmation Email"><i class="fas fa-envelope"></i> Send Confirmation Email</a>-->
+                        <a href="{{route('backend.consultants.emailConfirmationResend', $user->id)}}" class="btn btn-outline-primary btn-sm " data-toggle="tooltip" title="Send Confirmation Email"><i class="fas fa-envelope"></i> Send Confirmation Email</a>
                             @else
                             {!! $user->confirmed_label !!}
                             @endif
@@ -114,7 +114,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="card-body">
-                                                          {{--   @if ($role->id != 1)
+                                                        {{--  @if ($role->id != 1)
                                                                 @if ($role->permissions->count())
                                                                     @foreach ($role->permissions as $permission)
                                                                         <i class="far fa-check-circle mr-1"></i>{{ $permission->name }}&nbsp;
@@ -125,7 +125,7 @@
                                                             @else
                                                                 All Permissions
                                                             @endif
-                                                        --}}
+                                                        --}}  
                                                         </div>
                                                     </div><!--card-->
                                                 @endforeach
@@ -133,7 +133,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            <!-- <div class="col-sm-6">
+                               <!-- <div class="col-sm-6">
                                     <div class="card card-accent-info">
                                         <div class="card-header">
                                             @lang('Permissions')
@@ -149,7 +149,7 @@
                                         </div>
                                     </div>
                                 </div>
-                              -->
+                                    -->
                             </div>
                         </div>
                     </div>
@@ -164,19 +164,19 @@
                         <div class="col-sm-8">
                             <div class="float-right">
                                 @if ($$module_name_singular->status != 2 && $$module_name_singular->id != 1)
-                                <a href="{{route('backend.candidates.block', $$module_name_singular)}}" class="btn btn-danger" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.block')}}" data-confirm="Are you sure?"><i class="fas fa-ban"></i></a>
+                                <a href="{{route('backend.consultants.block', $$module_name_singular)}}" class="btn btn-danger" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.block')}}" data-confirm="Are you sure?"><i class="fas fa-ban"></i></a>
                                 @endif
                                 @if ($$module_name_singular->status == 2)
-                                <a href="{{route('backend.candidates.unblock', $$module_name_singular)}}" class="btn btn-info" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.unblock')}}" data-confirm="Are you sure?"><i class="fas fa-check"></i> Unblock</a>
+                                <a href="{{route('backend.consultants.unblock', $$module_name_singular)}}" class="btn btn-info" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.unblock')}}" data-confirm="Are you sure?"><i class="fas fa-check"></i> Unblock</a>
                                 @endif
                              {{--    @if ($$module_name_singular->email_verified_at == null)
-                                <a href="{{route('backend.candidates.emailConfirmationResend', $$module_name_singular->id)}}" class="btn btn-primary" data-toggle="tooltip" title="Send Confirmation Email"><i class="fas fa-envelope"></i></a>
+                                <a href="{{route('backend.consultants.emailConfirmationResend', $$module_name_singular->id)}}" class="btn btn-primary" data-toggle="tooltip" title="Send Confirmation Email"><i class="fas fa-envelope"></i></a>
                                 @endif
                              --}}  
                                 @if($$module_name_singular->id != 1)
-                                <a href="{{route("backend.candidates.destroy", $$module_name_singular)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}"><i class="fas fa-trash-alt"></i> Delete</a>
+                                <a href="{{route("backend.consultants.destroy", $$module_name_singular)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}"><i class="fas fa-trash-alt"></i> Delete</a>
                                 @endif
-                                <a href="{{ route("backend.candidates.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
+                                <a href="{{ route("backend.consultants.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                             </div>
                         </div>
                     </div>

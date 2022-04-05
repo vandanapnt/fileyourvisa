@@ -41,7 +41,7 @@
                             <td>{{ $$module_name_singular->name }}</td>
                         </tr>
 
-                        <tr>
+                        <!--<tr>
                             <th>{{ __("labels.backend.$module_name.fields.permissions") }}</th>
                             <td>
                                 @if($$module_name_singular->permissions()->count() > 0)
@@ -52,7 +52,7 @@
                                     </ul>
                                 @endif
                             </td>
-                        </tr>
+                        </tr>-->
 
                         <tr>
                             <th>{{ __("labels.backend.$module_name.fields.created_at") }}</th>

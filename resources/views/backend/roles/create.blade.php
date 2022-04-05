@@ -54,7 +54,7 @@
                                 ->required() }}
                         </div>
                     </div><!--form-group-->
-
+               <!--
                     <div class="form-group row">
                         {{ html()->label('Abilities')->class('col-md-2 form-control-label') }}
 
@@ -82,7 +82,9 @@
                                 </table>
                             </div>
                         </div>
-                    </div><!--form-group-->
+                    </div>
+                     -->
+                    <!--form-group-->
 
                     <div class="row">
                         <div class="col-6">

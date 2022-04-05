@@ -116,7 +116,7 @@
                             </td>
 
                         </tr>
-                        <tr>
+                        <!--<tr>
                             <th>{{ __('labels.backend.users.fields.permissions') }}</th>
                             <td>
                                 @if($user->getAllPermissions()->count() > 0)
@@ -127,7 +127,7 @@
                                     </ul>
                                 @endif
                             </td>
-                        </tr>
+                        </tr>-->
 
                         <tr>
                             <th>{{ __('labels.backend.users.fields.created_at') }}</th>

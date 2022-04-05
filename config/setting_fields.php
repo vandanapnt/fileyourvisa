@@ -108,7 +108,7 @@ return [
         ],
 
     ],
-    'meta' => [
+   /* 'meta' => [
         'title' => 'Meta ',
         'desc'  => 'Application Meta Data',
         'icon'  => 'fas fa-globe-asia',
@@ -179,6 +179,7 @@ return [
             ],
         ],
     ],
+ */
     'analytics' => [
         'title' => 'Analytics',
         'desc'  => 'Application Analytics',

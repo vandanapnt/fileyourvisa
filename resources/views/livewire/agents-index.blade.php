@@ -10,8 +10,8 @@
                         <th>{{ __('labels.backend.users.fields.email') }}</th>
                         <th>{{ __('labels.backend.users.fields.status') }}</th>
                         <th>{{ __('labels.backend.users.fields.roles') }}</th>
-                        <th>{{ __('labels.backend.users.fields.permissions') }}</th>
-                        <!--<th>{{ __('labels.backend.users.fields.social') }}</th>-->
+                        <!--<th>{{ __('labels.backend.users.fields.permissions') }}</th>
+                        <th>{{ __('labels.backend.users.fields.social') }}</th>-->
 
                         <th class="text-right">{{ __('labels.backend.action') }}</th>
                     </tr>
@@ -40,7 +40,7 @@
                             </ul>
                             @endif
                         </td>
-                        <td>
+                        <!--  <td>
                             @if($user->getAllPermissions()->count() > 0)
                             <ul>
                                 @foreach ($user->getDirectPermissions() as $permission)
@@ -49,7 +49,7 @@
                             </ul>
                             @endif
                         </td>
-                       <!-- <td>
+                      <td>
                             <ul class="list-unstyled">
                                 @foreach ($user->providers as $provider)
                                 <li>
