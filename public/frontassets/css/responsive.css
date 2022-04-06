@@ -1,3 +1,13 @@
+@media screen and (max-width: 1549px) {
+  .faq-tab-dv {
+    font-size: 14px;
+    padding: 13px 15px;
+  }
+  .faq-tab-dv {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .footer-logo-area-in {
     padding: 60px 15px;
@@ -53,6 +63,27 @@
   }
   .right-ab-img:after {
     top: 30%;
+  }
+  .iso-text h4 {
+    font-size: 16px;
+  }
+  .iso-inner {
+    padding: 5px;
+  }
+  .faq-wrap-lft {
+    padding-right: 40px;
+  }
+  .faq-tab-dv {
+    font-size: 12px;
+  }
+  .faqaaco-btn {
+    font-size: 14px;
+  }
+  .faq-acco-body p {
+    font-size: 14px;
+  }
+  .faq-tab-dv {
+    margin-right: 15px;
   }
 }
 
@@ -399,6 +430,83 @@
   .copyright-in {
     text-align: center;
   }
+
+  .map {
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .contact-us-in {
+    display: block;
+    height: auto;
+  }
+  .about-file-visa-rgt {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+  .about-file-visa-rgt-in h4 {
+    margin-bottom: 0;
+  }
+  .about-file-visa-rgt-in h2 {
+    margin-bottom: 10px;
+  }
+  .misstion-in {
+    display: block;
+  }
+  .misstion_text {
+    width: 100%;
+    padding: 25px;
+  }
+  .misttion-img-pnl {
+    width: 100%;
+  }
+  .career-section {
+    float: left;
+    position: relative;
+    padding: 60px 0;
+  }
+  .clnt-section {
+    padding: 80px 0 200px 0;
+  }
+  .misstion_text h2 {
+    line-height: 35px;
+    margin: 15px 0 15px 0;
+  }
+  .about-file-visa-rgt {
+    margin-top: 40px;
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+  .misstion_text p {
+    color: #292727;
+    margin-bottom: 20px;
+  }
+  .misstion_text h2 {
+    line-height: 28px;
+  }
+  .iso-inner {
+    justify-content: center;
+  }
+  .iso-inner .iso-img {
+    margin-right: 10px;
+  }
+  .faq-wrap-lft {
+    padding-right: 15px;
+  }
+  .ser-info-lft {
+    padding-right: 0;
+  }
+  .edulogobox-img img {
+    width: 100%;
+  }
+  .service-details-left-menu ul li a {
+    font-size: 13px;
+  }
+  .download-box a {
+    font-size: 14px;
+  }
+  .tabs-nav ul li {
+    padding: 20px;
+  }
 }
 @media screen and (max-width: 767px) {
   .headerTop:after {
@@ -696,9 +804,107 @@
     padding: 6px 15px;
     height: 40px;
   }
+  .infor-con {
+    padding: 80px 0 60px;
+  }
+  .inforbox {
+    margin-bottom: 80px;
+  }
+  .map {
+    height: auto;
+  }
+  .aboutvisafile-img-lft {
+    width: 100%;
+  }
+  .aboutvisafile-img-rgt {
+    width: 100%;
+  }
+  .aboutvisafile-img-lft {
+    margin-bottom: 20px;
+  }
+  .about-fileyourvisa {
+    padding: 40px 0;
+  }
+  .faq-wrap-part > h2 {
+    margin-bottom: 30px;
+  }
+  .faq-wrap-part {
+    padding: 60px 0 100px;
+  }
+  .faq-tab-dv {
+    margin-right: 10px;
+  }
+  .service-info-section {
+    padding-top: 45px;
+  }
+  .serinfo-txt-sctn h2 {
+    line-height: 22px;
+    margin: 15px 0;
+  }
+  .servc-info-pnl {
+    margin-top: 30px;
+  }
+  .ser-info-lft {
+    padding-right: 5px;
+  }
+  .info-srvc-box {
+    padding: 10px;
+  }
+  .edulogo-box {
+    width: 50%;
+    padding: 0;
+  }
+  .edulogoin .edulogo-box:nth-child(2) {
+    border-right: 1px solid #d9d9d9;
+    border-bottom: none;
+  }
+  .edulogoin .edulogo-box:nth-child(1) {
+    border-bottom: none;
+  }
+  .edulogoin .edulogo-box:nth-child(3) {
+    border-bottom: none;
+  }
+  .service-details-wrap-rgt {
+    padding-left: 5px;
+  }
+  .service-details-wrap-rgt {
+    padding-left: 5px;
+    margin-top: 40px;
+  }
+  .service-details-big-img {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .tabs-nav-container .tabs-nav-content .inner .col {
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    flex: 0 0 100%;
+  }
+  .tabs-nav-container .tabs-nav-content .inner {
+    display: block;
+  }
+  .tabs-nav ul li {
+    padding: 10px;
+    font-size: 13px;
+  }
+  .year-tab-section {
+    margin-top: -21px;
+    padding: 0;
+  }
+  .tabs-nav-container .tabs-nav-content .inner .col::after {
+    display: none;
+  }
+  .visafileimg-in {
+    height: 550px;
+  }
 }
 
 @media screen and (max-width: 449px) {
+  .faq-tab-dv {
+    margin-right: 5px;
+  }
   .banner .bannerContent h1 {
     line-height: 34px;
   }
@@ -735,5 +941,14 @@
   .sub-txt h4 {
     margin-bottom: 12px;
     font-size: 14px;
+  }
+  .faq-tab-dv {
+    font-size: 10px;
+  }
+  .faqaaco-btn {
+    font-size: 13px;
+  }
+  .faq-acco-body p {
+    font-size: 13px;
   }
 }

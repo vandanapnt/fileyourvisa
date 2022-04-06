@@ -1,8 +1,7 @@
 <nav class="navbar d-block navbar-expand-lg fixed-top header">
       <div class="container">
         <div
-          class="bgColorWhite font_12 d-flex justify-content-between align-items-center headerTop"
-        >
+          class="bgColorWhite font_12 d-flex justify-content-between align-items-center headerTop">
           <div class="col opentime">
             <h5><span>Opening Time :</span> 8:30 AM - 9:30 PM</h5>
           </div>
@@ -11,10 +10,9 @@
             <div class="location-rght-apply">
               <a class="location" href="#"
                 ><i class="mapicon" aria-hidden="true"
-                  ><img src="{{ 'images/mapicon.png' }}" alt=""
+                  ><img src="{{ url('/frontassets/images/mapicon.png') }}" alt=""
                 /></i>
-                Our Location</a
-              >
+                Our Location</a>
               <a class="applynow desktop-appy" href="#">Apply Now</a>
             </div>
           </div>
@@ -24,8 +22,8 @@
           class="d-flex justify-content-between align-items-center headerMain"
         >
           <div class="col-sm-3 headerNavLeft">
-            <a class="navbar-brand" href="#">
-              <img src="{{'images/logo.png'}}" alt="logo" />
+            <a class="navbar-brand" href="{{ url('/') }}">
+              <img src="{{ url('/frontassets/images/logo.png') }}" alt="logo" />
             </a>
           </div>
           <div
@@ -34,7 +32,7 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -48,9 +46,9 @@
                   services
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Services</a></li>
+                  <li><a class="dropdown-item" href="{{ url('/services') }}">Services</a></li>
                   <li>
-                    <a class="dropdown-item" href="#">Services Details</a>
+                    <a class="dropdown-item" href="{{ url('/services/student-visa') }}">Services Details</a>
                   </li>
                 </ul>
               </li>
@@ -69,7 +67,7 @@
               <a class="applynow" href="#">Apply Now</a>
               <div class="contactinfo">
                 <span class="callicon"
-                  ><img src="{{'images/calicon.png'}}" alt="call-icon"
+                  ><img src="{{ url('/frontassets/images/calicon.png') }}" alt="call-icon"
                 /></span>
                 <div class="carttext">
                   <span class="shoppingttle">Contact Us</span>
@@ -81,7 +79,7 @@
           <div class="col-3 call-contact">
             <div class="searchbar">
               <div class="searchbar-icon">
-                <img src="{{ 'images/search-icon.png' }}" alt="search-icon" />
+                <img src="{{ url('/frontassets/images/search-icon.png') }}" alt="search-icon" />
               </div>
               <div class="searchbar-info">
                 <div class="container">
@@ -91,7 +89,7 @@
                       <span class="input-group-text searchicon-dv"
                         ><button class="search-submit">
                           <img
-                            src="{{ 'images/search-icon.png'}}"
+                            src="{{ url('/frontassets/images/search-icon.png') }}"
                             alt="search-icon"
                           /></button
                       ></span>
@@ -111,7 +109,7 @@
 
             <div class="contactinfo desktop-appy">
               <span class="callicon"
-                ><img src="{{ 'images/calicon.png'}}" alt="call-icon"
+                ><img src="{{ url('/frontassets/images/calicon.png') }}" alt="call-icon"
               /></span>
               <div class="carttext">
                 <span class="shoppingttle">Contact Us</span>

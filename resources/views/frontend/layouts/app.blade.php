@@ -25,14 +25,14 @@
 
     <!--<link rel="stylesheet" href="{{ mix('css/frontend.css') }}">-->
      <!-- Bootstrap CSS -->
-     <link href="{{ 'frontcss/bootstrap.min.css' }}" rel="stylesheet" />
-    <link href="{{ 'frontcss/jquery.mCustomScrollbar.css' }}" rel="stylesheet" />
-    <link href="{{ 'frontcss/slick.css'}}" rel="stylesheet" />
-    <link href="{{ 'frontcss/slick.css' }}" rel="stylesheet" />
-    <link href="{{ 'frontcss/font-awesome.min.css' }}" rel="stylesheet" />
-    <link href="{{ 'frontcss/common.css' }}" rel="stylesheet" />
-    <link href="{{ 'frontcss/style.css' }}" rel="stylesheet" />
-    <link href="{{ 'frontcss/responsive.css' }}" rel="stylesheet" />
+     <link href="{{ url('/frontassets/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url('frontassets/css/jquery.mCustomScrollbar.css') }}" rel="stylesheet" />
+    <link href="{{ url('frontassets/css/slick.css')}}" rel="stylesheet" />
+    <link href="{{ url('frontassets/css/slick.css') }}" rel="stylesheet" />
+    <link href="{{ url('frontassets/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ url('frontassets/css/common.css') }}" rel="stylesheet" />
+    <link href="{{ url('frontassets/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ url('frontassets/css/responsive.css') }}" rel="stylesheet" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"

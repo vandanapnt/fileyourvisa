@@ -39,8 +39,8 @@
                             <th>
                                 @lang('Title')
                             </th>
-                            <th>
-                                @lang('Description')
+                           <th>
+                                @lang('Status')
                             </th>
                             <th>
                                 @lang('Created At')
@@ -67,9 +67,14 @@
                                 </a>
                             </td>
                             <td>
-                                   <span class="{{$span_class}}">
-                                        {{ $row['service_description'] }}
-                                    </span>
+                                <span class="{{$span_class}}">
+                                @if($row['status'] == 1)
+                                    {!! 'Active' !!}
+                                @else
+                                    {!! 'Inactive' !!}  
+                                 @endif                                   
+                                       {{-- {!! $row['service_description'] !!}   --}}
+                                </span>
                             </td>
                             <td>
                                  <span class="{{$span_class}}">

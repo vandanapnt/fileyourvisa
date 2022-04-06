@@ -18,9 +18,19 @@ Route::get('language/{language}', 'LanguageController@switch')->name('language.s
 *
 * --------------------------------------------------------------------
 */
-Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', 'FrontendController@index')->name('index');
     Route::get('home', 'FrontendController@index')->name('home');
+   
+    Route::get('/services', 'FrontendController@servicelist')->name('servicelist');
+    Route::get('/services/{slug}', 'FrontendController@servicedetail')->name('servicedetail');
+
+
+    Route::get('/agent-login', 'UserController@agentlogin')->name('agentlogin');
+    Route::post('/makelogin', 'UserController@makelogin')->name('makelogin');
+    Route::post('/userlogout', 'UserController@logout')->name('logout');
+
+
 });
 
 /*

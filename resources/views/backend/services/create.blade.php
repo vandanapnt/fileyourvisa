@@ -57,6 +57,7 @@
                         {{ html()->textarea('service_description')
                                 ->class('form-control')
                                 ->placeholder(__('Description'))
+                                ->id('tinymce')
                                 //->attribute('maxlength', 191)
                                 ->required() }}
                     </div>
@@ -71,6 +72,13 @@
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                  @enderror
                          </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    {{ html()->label(__('Status'))->class('col-sm-2 form-control-label')->for('status') }}
+                    <div class="col-sm-10">
+                    {!! Form::select('status', $statusarr, '', ['class' => 'form-control']) !!}
                     </div>
                 </div>
 
@@ -108,5 +116,19 @@
         </div>
     </div>
 </div>
+
+  <script type="text/javascript">
+        tinymce.init({
+            selector: 'textarea#tinymce',
+            height: 400,
+            setup: function (editor) {
+               editor.on('change', function () {
+               tinymce.triggerSave();
+              });
+            },
+            menubar: false,
+            browser_spellcheck: true
+        });
+    </script>
 
 @endsection

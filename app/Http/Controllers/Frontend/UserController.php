@@ -12,8 +12,10 @@ use App\Models\Userprofile;
 use App\Models\UserProvider;
 use Exception;
 use Illuminate\Http\Request;
+use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class UserController extends Controller
@@ -422,4 +424,58 @@ class UserController extends Controller
             }
         }
     }
+
+
+  public function agentlogin() {
+
+      $body_class = 'login-page';
+  
+      //$id = auth()->user()->id;
+
+    return view("frontend.users.agentlogin", compact('body_class'));
+  
+ }
+  /**
+     * Handle an incoming authentication request.
+     *
+     * @param \App\Http\Requests\Auth\LoginRequest $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function makelogin(LoginRequest $request)
+    {
+        $request->authenticate();
+
+        $request->session()->regenerate();
+
+        $redirectTo = request()->redirectTo;
+
+        if ($redirectTo) {
+            return redirect($redirectTo);
+        } else {
+            return redirect(RouteServiceProvider::HOME);
+        }
+    }
+
+    /**
+     * Destroy an authenticated session.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
+
+
+
 }

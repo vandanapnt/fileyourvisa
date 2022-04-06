@@ -122,9 +122,11 @@ class ServicesController extends Controller
         //$roles = Role::get();
         //$permissions = Permission::select('name', 'id')->get();
 
+        $statusarr =  ['0'=>'Inactive', '1'=>'Active'];
+
         return view(
             "backend.$module_name.create",
-            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular')
+            compact('statusarr','module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular')
         );
     }
 
@@ -167,16 +169,19 @@ class ServicesController extends Controller
              //$request->merge(['service_image' => $filename]);                 
          } else { $filename = ''; }
 
-
+         $slug = \Str::slug($request->service_title);
 
         //$data_array = $request->all();
               
         // $$module_name_singular = Service::create($request->all()); 
           //You should store only filename not path in db
-            Service::create([
+         
+           Service::create([
                     'service_title' => $request->service_title,
                     'service_description' => $request->service_description,
-                    'service_image' => $filename 
+                    'service_image' => $filename ,
+                    'status' => $request->status ,
+                    'service_slug'=> $slug
                     
                 ]);
             
@@ -207,7 +212,9 @@ class ServicesController extends Controller
         $module_action = 'Edit';
 
         $service = Service::find($id);
-        return view("backend.$module_name.edit", compact('service','module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular'));
+        $statusarr =  ['0'=>'Inactive', '1'=>'Active'];
+
+        return view("backend.$module_name.edit", compact('service','statusarr','module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular'));
     }
    
     public function update(Request $request, $id)
@@ -222,7 +229,9 @@ class ServicesController extends Controller
             $image->move(public_path('uploads/services'), $filename);
             $service->service_image =   $request->file('service_image')->getClientOriginalName();
         }
-       
+        $Service->Service_slug = \Str::slug($request->input('service_title'));
+        $Service->status = $request->input('status');
+        
         $Service->update();
         Flash::success("<i class='fas fa-check'></i> Service Updated")->important();
         return redirect("controlroom/$module_name");

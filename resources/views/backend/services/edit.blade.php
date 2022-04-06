@@ -59,6 +59,7 @@
                                 ->class('form-control')
                                 ->placeholder(__('Description'))
                                 //->attribute('maxlength', 191)
+                                ->id('tinymce')
                                 ->required()
                                 ->value($service->service_description) }}
                     </div>
@@ -75,6 +76,13 @@
                                
                                  <img src="{{url('/uploads/services/'.$service->service_image)}}" alt="Image" width="100" height="100"/>
                          </div>
+                    </div>
+                </div>
+                        
+                <div class="form-group row">
+                    {{ html()->label(__('Status'))->class('col-sm-2 form-control-label')->for('status') }}
+                    <div class="col-sm-10">
+                    {!! Form::select('status', $statusarr, $service->status, ['class' => 'form-control']) !!}
                     </div>
                 </div>
 
@@ -113,4 +121,17 @@
     </div>
 </div>
 
+<script type="text/javascript">
+        tinymce.init({
+            selector: 'textarea#tinymce',
+            height: 400,
+            setup: function (editor) {
+               editor.on('change', function () {
+               tinymce.triggerSave();
+              });
+            },
+            menubar: false,
+            browser_spellcheck: true
+        });
+    </script>
 @endsection

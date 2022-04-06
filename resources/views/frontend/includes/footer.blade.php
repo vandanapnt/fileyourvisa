@@ -3,15 +3,15 @@
 
 
 <div class="full_width footer">
-      <div class="scroll-top"><img src="{{'images/top-arrow.png'}}" alt="" /></div>
+      <div class="scroll-top"><img src="{{ url('/frontassets/images/top-arrow.png')}}" alt="" /></div>
       <div class="container">
         <div class="row">
           <div class="col-xl-4 col-lg-4 col-md-12 col-12 footer-logo-area">
             <div class="full_width footer-logo-area-in">
               <div class="full_width footer-logo-pnl">
                 <div class="foooter-logo">
-                  <a href="#"
-                    ><img src="{{'images/footer-logo.png'}}" alt="logo"
+                  <a href="{{ url('/') }}"
+                    ><img src="{{ url('/frontassets/images/footer-logo.png')}}" alt="logo"
                   /></a>
                 </div>
                 <div class="footerlogotext">
@@ -25,22 +25,22 @@
                   <ul>
                     <li>
                       <a href="#"
-                        ><img src="{{'images/social-icon1.png'}}" alt=""
+                        ><img src="{{ url('/frontassets/images/social-icon1.png') }}" alt=""
                       /></a>
                     </li>
                     <li>
                       <a href="#"
-                        ><img src="{{'images/social-icon2.png'}}" alt=""
+                        ><img src="{{ url('/frontassets/images/social-icon2.png') }}" alt=""
                       /></a>
                     </li>
                     <li>
                       <a href="#"
-                        ><img src="{{'images/social-icon3.png'}}" alt=""
+                        ><img src="{{ url('/frontassets/images/social-icon3.png') }}" alt=""
                       /></a>
                     </li>
                     <li>
                       <a href="#"
-                        ><img src="{{'images/social-icon4.png'}}" alt=""
+                        ><img src="{{ url('/frontassets/images/social-icon4.png') }}" alt=""
                       /></a>
                     </li>
                   </ul>
@@ -49,7 +49,7 @@
               <div class="full_width calluspanel">
                 <div class="callus-in">
                   <div class="calusicon">
-                    <img src="images/cal-us-icon.png" alt="calus" />
+                    <img src="{{ url('/frontassets/images/cal-us-icon.png') }}" alt="calus" />
                   </div>
                   <div class="calustext">
                     <h6 class="calormsg">Call - Or - SMS</h6>
@@ -91,18 +91,18 @@
                   <ul>
                     <li>
                       <a href="#"
-                        ><i><img src="images/ftr-cal-icon.png" alt="" /></i> 1
+                        ><i><img src="{{ url('/frontassets/images/ftr-cal-icon.png') }}" alt="" /></i> 1
                         587 203 692
                       </a>
                     </li>
                     <li>
                       <a href="#"
-                        ><i><img src="images/ftr-email-icon.png" alt="" /></i>
+                        ><i><img src="{{ url('/frontassets/images/ftr-email-icon.png') }}" alt="" /></i>
                         support@gmail.com
                       </a>
                     </li>
                     <li>
-                      <i><img src="images/ftr-map-icon.png" alt="" /></i>
+                      <i><img src="{{ url('/frontassets/images/ftr-map-icon.png') }}" alt="" /></i>
                       <a href="#"
                         >250 Halderman Rd, West Alexandria, OH, 45381</a
                       >
@@ -161,10 +161,10 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="{{'frontjs/bootstrap.bundle.min.js'}}"></script>
+    <script src="{{url('/frontassets/js/bootstrap.bundle.min.js')}}"></script>
 
-    <script src="{{'frontjs/slick.js'}}"></script>
-    <script src="{{'frontjs/custom.js'}}"></script>
+    <script src="{{ url('/frontassets/js/slick.js') }}"></script>
+    <script src="{{ url('/frontassets/js/custom.js') }}"></script>
 
     <!-- <script>
         $(window).bind('load', function () {
