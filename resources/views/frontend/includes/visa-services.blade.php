@@ -16,12 +16,12 @@
                 </h5>
                 <p> 
                 {!!                
-                     $newText = wordwrap(substr($service->service_description, 0, 100), 99, '...');
+                     $newText = substr($service->service_description, 0, 100).'...';
                      
                 !!}
                
                 </p>
-                <a href="#"
+                <a href="{{url('/services/'.$service->service_slug)}}"
                   >Read More
                   <i class="rightarrow" aria-hidden="true"
                     ><img src="{{ url('/frontassets/images/rightarrow.png') }}" alt="rightarrow" /></i

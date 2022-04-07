@@ -14,20 +14,22 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        $services = Service::all();
+        $services = Service::where('status','1')->get();
         return view('frontend.index', compact('services'));
     }
 
     public function servicelist()
     {       
-        $services = Service::all();
+        $services = Service::where('status','1')->get();
         return view('frontend.servicelist', compact('services'));
     }
 
     public function servicedetail($slug)
     {
+        $services = Service::where('status','1')->get();
         $servicedata = Service::where('service_slug', $slug)->first();
-        return view('frontend.servicedetail')->with('servicedata', $servicedata);
+        return view('frontend.servicedetail')->with('servicedata', $servicedata)->
+                                               with('services', $services);
     }
 
 }

@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="full_width banner">
-      <img src="{{'frontassets/images/banner.jpg'}}" class="object_fit_cover" />
+      <img src="{{ url('frontassets/images/banner.jpg')}}" class="object_fit_cover" />
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center">
@@ -36,7 +36,7 @@
           >
             <div class="visainfortext">
               <span class="visainfoimg"
-                ><img src="{{'frontassets/images/visainfo-icon1.png'}}" alt=""
+                ><img src="{{ url('frontassets/images/visainfo-icon1.png') }}" alt=""
               /></span>
               <h3 class="font_20 font700 colorWhite">
                 Online Visa <br />
@@ -50,7 +50,7 @@
           >
             <div class="visainfortext">
               <span class="visainfoimg"
-                ><img src="{{'frontassets/images/visainfo-icon2.png'}}" alt=""
+                ><img src="{{ url('frontassets/images/visainfo-icon2.png') }}" alt=""
               /></span>
               <h3 class="font_20 font700 colorWhite">
                 Visa <br />
@@ -64,7 +64,7 @@
           >
             <div class="visainfortext">
               <span class="visainfoimg"
-                ><img src="{{'frontassets/images/visainfo-icon3.png'}}" alt=""
+                ><img src="{{ url('frontassets/images/visainfo-icon3.png')}}" alt=""
               /></span>
               <h3 class="font_20 font700 colorWhite">
                 Immigration <br />
@@ -78,7 +78,7 @@
           >
             <div class="visainfortext">
               <span class="visainfoimg"
-                ><img src="{{'frontassets/images/visainfo-icon4.png'}}" alt=""
+                ><img src="{{ url('frontassets/images/visainfo-icon4.png') }}" alt=""
               /></span>
               <h3 class="font_20 font700 colorWhite">
                 Online Passport <br />
@@ -113,15 +113,15 @@
                 </h5>
                 <p> 
                 {!!                
-                     $newText = wordwrap(substr($service->service_description, 0, 100), 99, '...');
+                  $newText = substr($service->service_description, 0, 100).'...';
                      
                 !!}
                
                 </p>
-                <a href="#"
+                <a href="{{url('/services/'.$service->service_slug)}}"
                   >Read More
                   <i class="rightarrow" aria-hidden="true"
-                    ><img src="{{'frontassets/images/rightarrow.png'}}" alt="rightarrow" /></i
+                    ><img src="{{url('frontassets/images/rightarrow.png')}}" alt="rightarrow" /></i
                 ></a>
               </div>
             </div>
@@ -133,7 +133,7 @@
     </div>
 
     <div class="full_width scolershipbanner">
-      <img src="{{'frontassets/images/scolarship-banner.jpg'}}" class="object_fit_cover" />
+      <img src="{{url('frontassets/images/scolarship-banner.jpg')}}" class="object_fit_cover" />
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center justify-content-end">
@@ -148,11 +148,11 @@
               based Immigration. Praesent eui vel aliquam nisl efficitur eu.
             </h5>
             <ul class="flagul">
-              <li><img src="{{'frontassets/images/flag-1.jpg'}}" alt="flag" /></li>
-              <li><img src="{{'frontassets/images/flag-2.jpg'}}" alt="flag" /></li>
-              <li><img src="{{'frontassets/images/flag-3.jpg'}}" alt="flag" /></li>
-              <li><img src="{{'frontassets/images/flag-4.jpg'}}" alt="flag" /></li>
-              <li><img src="{{'frontassets/images/flag-5.jpg'}}" alt="flag" /></li>
+              <li><img src="{{ url('frontassets/images/flag-1.jpg') }}" alt="flag" /></li>
+              <li><img src="{{ url('frontassets/images/flag-2.jpg') }}" alt="flag" /></li>
+              <li><img src="{{ url('frontassets/images/flag-3.jpg') }}" alt="flag" /></li>
+              <li><img src="{{ url('frontassets/images/flag-4.jpg') }}" alt="flag" /></li>
+              <li><img src="{{ url('frontassets/images/flag-5.jpg') }}" alt="flag" /></li>
             </ul>
             <h4 class="font_15 font700 colorWhite">
               Validity From : 2022-01-11 12:00 - 2022-01-11 12:00
@@ -194,7 +194,7 @@
               <div class="col-lg-12">
                 <img
                   class="object_fit_cover"
-                  src="{{'frontassets/images/about-right-img1.jpg'}}"
+                  src="{{ url('frontassets/images/about-right-img1.jpg') }}"
                   alt=""
                 />
               </div>
@@ -202,14 +202,14 @@
               <div class="col-lg-6 mb15">
                 <img
                   class="object_fit_cover"
-                  src="{{'frontassets/images/about-right-img2.jpg'}}"
+                  src="{{ url('frontassets/images/about-right-img2.jpg')}}"
                   alt=""
                 />
               </div>
               <div class="col-lg-6">
                 <img
                   class="object_fit_cover"
-                  src="{{'frontassets/images/about-right-img3.jpg'}}"
+                  src="{{ url('frontassets/images/about-right-img3.jpg') }}"
                   alt=""
                 />
               </div>
@@ -253,7 +253,7 @@
     </div>
 
     <div class="full_width popular-country-section">
-      <img src="{{'frontassets/images/populer-country-bg.jpg'}}" class="object_fit_cover" />
+      <img src="{{url('frontassets/images/populer-country-bg.jpg')}}" class="object_fit_cover" />
       <div class="overlay"></div>
       <div class="container">
         <div class="row align-items-center justify-content-end">
@@ -278,13 +278,13 @@
                   <div class="full_width country-box-img">
                     <img
                       class="object_fit_cover"
-                      src="{{'frontassets/images/country-img-1.jpg'}}"
+                      src="{{url('frontassets/images/country-img-1.jpg')}}"
                       alt=""
                     />
                   </div>
                   <div class="full_width country-flag-dv">
                     <div class="flgimg">
-                      <img src="{{'frontassets/images/flag-1.jpg'}}" alt="" />
+                      <img src="{{ url('frontassets/images/flag-1.jpg') }}" alt="" />
                     </div>
                     <div class="flagtext">
                       <h4 class="font_18 colorBlack font700 text-uppercase">
@@ -304,13 +304,13 @@
                   <div class="full_width country-box-img">
                     <img
                       class="object_fit_cover"
-                      src="{{'frontassets/images/country-img-2.jpg'}}"
+                      src="{{ url('frontassets/images/country-img-2.jpg') }}"
                       alt=""
                     />
                   </div>
                   <div class="full_width country-flag-dv">
                     <div class="flgimg">
-                      <img src="{{'frontassets/images/flag-2.jpg'}}" alt="" />
+                      <img src="{{ url('frontassets/images/flag-2.jpg') }}" alt="" />
                     </div>
                     <div class="flagtext">
                       <h4 class="font_18 colorBlack font700 text-uppercase">
@@ -330,13 +330,13 @@
                   <div class="full_width country-box-img">
                     <img
                       class="object_fit_cover"
-                      src="{{'frontassets/images/country-img-3.jpg'}}"
+                      src="{{ url('frontassets/images/country-img-3.jpg') }}"
                       alt=""
                     />
                   </div>
                   <div class="full_width country-flag-dv">
                     <div class="flgimg">
-                      <img src="{{'frontassets/images/flag-3.jpg'}}" alt="" />
+                      <img src="{{ url('frontassets/images/flag-3.jpg') }}" alt="" />
                     </div>
                     <div class="flagtext">
                       <h4 class="font_18 colorBlack font700 text-uppercase">
@@ -356,13 +356,13 @@
                   <div class="full_width country-box-img">
                     <img
                       class="object_fit_cover"
-                      src="{{'frontassets/images/country-img-4.jpg'}}"
+                      src="{{url('frontassets/images/country-img-4.jpg')}}"
                       alt=""
                     />
                   </div>
                   <div class="full_width country-flag-dv">
                     <div class="flgimg">
-                      <img src="{{'frontassets/images/flag-4.jpg'}}" alt="" />
+                      <img src="{{ url('frontassets/images/flag-4.jpg') }}" alt="" />
                     </div>
                     <div class="flagtext">
                       <h4 class="font_18 colorBlack font700 text-uppercase">
@@ -382,13 +382,13 @@
                   <div class="full_width country-box-img">
                     <img
                       class="object_fit_cover"
-                      src="{{'frontassets/images/country-img-1.jpg'}}"
+                      src="{{ url('frontassets/images/country-img-1.jpg') }}"
                       alt=""
                     />
                   </div>
                   <div class="full_width country-flag-dv">
                     <div class="flgimg">
-                      <img src="{{'frontassets/images/flag-1.jpg'}}" alt="" />
+                      <img src="{{ url('frontassets/images/flag-1.jpg') }}" alt="" />
                     </div>
                     <div class="flagtext">
                       <h4 class="font_18 colorBlack font700 text-uppercase">
@@ -423,7 +423,7 @@
                 <div class="testiusericon">
                   <img
                     class="object_fit_cover"
-                    src="{{'frontassets/images/testi-img1.jpg'}}"
+                    src="{{ url('frontassets/images/testi-img1.jpg') }}"
                     alt=""
                   />
                 </div>
@@ -438,7 +438,7 @@
                 luctus eget lectus. ”
               </p>
               <div class="testiclone">
-                <img src="{{'frontassets/images/quote-icon.png'}}" alt="" />
+                <img src="{{url('frontassets/images/quote-icon.png')}}" alt="" />
               </div>
             </div>
           </div>
@@ -450,7 +450,7 @@
                 <div class="testiusericon">
                   <img
                     class="object_fit_cover"
-                    src="{{'frontassets/images/testi-img1.jpg'}}"
+                    src="{{url('frontassets/images/testi-img1.jpg')}}"
                     alt=""
                   />
                 </div>
@@ -465,7 +465,7 @@
                 luctus eget lectus. ”
               </p>
               <div class="testiclone">
-                <img src="{{'frontassets/images/quote-icon.png'}}" alt="" />
+                <img src="{{ url('frontassets/images/quote-icon.png') }}" alt="" />
               </div>
             </div>
           </div>
@@ -477,7 +477,7 @@
                 <div class="testiusericon">
                   <img
                     class="object_fit_cover"
-                    src="{{'frontassets/images/testi-img1.jpg'}}"
+                    src="{{ url('frontassets/images/testi-img1.jpg') }}"
                     alt=""
                   />
                 </div>
@@ -492,7 +492,7 @@
                 luctus eget lectus. ”
               </p>
               <div class="testiclone">
-                <img src="{{'frontassets/images/quote-icon.png'}}" alt="" />
+                <img src="{{url('frontassets/images/quote-icon.png')}}" alt="" />
               </div>
             </div>
           </div>

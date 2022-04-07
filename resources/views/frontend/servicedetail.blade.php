@@ -18,9 +18,9 @@
       </div>
       <div class="full_width inner-breadcum">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Student Visa</a></li>
+          <li><a href="{{url('/')}}">Home</a></li>
+          <li><a href="{{url('/services')}}">Services</a></li>
+          <li><a href="{{url('/services/'.$servicedata->service_slug)}}">Student Visa</a></li>
         </ul>
       </div>
     </div>
@@ -31,11 +31,15 @@
           <div class="col-md-4 col-12 service-details-wrap-lft">
             <div class="full_width service-details-wrap-lft-in">
               <div class="full_width service-details-left-menu">
-                <ul>
-                  <li><a href="#">Job/Work Visa</a></li>
-                  <li><a class="active" href="#">Student Visa</a></li>
-                  <li><a href="#">Business Visa</a></li>
-                  <li><a href="#">Tourist & Visitor Visa Available</a></li>
+                <ul>                
+                @foreach($services as $k => $service)
+                   @if($service->service_slug == $servicedata->service_slug)
+                   <?php $cls = 'active'; ?>
+                   @else
+                   <?php  $cls = '';  ?>
+                   @endif
+                  <li><a class="{{$cls}}" href="{{url('/services/'.$service->service_slug)}}"> {{ $service->service_title }}</a></li>
+                 @endforeach
                 </ul>
               </div>
               <div class="full_width download-box">
@@ -50,13 +54,13 @@
                 </div>
                 <div class="download-brch">
                   <a href="#">
-                    Service Broohoru<br />
+                    Visa Application Form<br />
                     PDF 12MB
                   </a>
                 </div>
                 <div class="download-brch">
                   <a href="#">
-                    Service Broohoru<br />
+                    Admission Form <br />
                     PDF 12MB
                   </a>
                 </div>
@@ -108,27 +112,10 @@
               <div class="full_width service-details-big-img">
                 <img
                   class="object_fit_cover"
-                  src="{{url('/frontassets/images/service-right-big-img.jpg')}}" alt=""/>
+                  src="{{url('/uploads/services/'.$servicedata->service_image)}}" alt=""/>
               </div>
               <div class="full_width servcs-prt-text font_16 font400">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                  a pharetra mi. Quisque in dictum arcu. Nullam aliquam, eros id
-                  commodo placerat,Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Cras a pharetra mi.
-                </p>
-                <p>
-                  Cras aliquam ipsum non laoreet maximus. Vivamus vel quam
-                  sodales mi eleifend finibus fringilla ut nulla. Curabitur
-                  commodo sem id nibh ornare, et pretium ipsum malesuada. Nulla
-                  facilisi. Vivamus posuere arcu nec purus convallis, at
-                  elementum nulla vehicula. In sodales lectus sed ipsum sagittis
-                  condimentum vel nec dolor. Quisque viverra a tellus vitae
-                  eleifend. Aliquam a magna auctor, sollicitudin nunc id,
-                  lacinia lacus. Quisque vehicula libero vitae augue dapibus
-                  tristique. Donec rutrum placerat lectus a mattis. Vestibulum
-                  ante ipsum primis in faucibus orci luctus et ultrices posuere.
-                </p>
+                 {!! $servicedata->service_description !!}                
               </div>
               <div class="full_width visaappli-prcss font_16 font400">
                 <h4 class="font_26 font700 colorBlack">
