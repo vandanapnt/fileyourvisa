@@ -16,12 +16,14 @@
           </div>
         </div>
       </div>
+       <!--
       <div class="full_width inner-breadcum">
         <ul>
           <li><a href="{{url('/')}}">Home</a></li>
           <li><a href="{{url('/services')}}">Services</a></li>
         </ul>
-      </div>
+      </div> 
+      -->
     </div>
 
     <div class="full_width service-info-section">

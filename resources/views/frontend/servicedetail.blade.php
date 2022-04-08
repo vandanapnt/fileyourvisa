@@ -11,18 +11,20 @@
         <div class="row align-items-center">
           <div class="bannerContent">
             <h1 class="font_52 fontopensans colorWhite font700 text-uppercase">
-              Services
+            {{ $servicedata->service_title }}
             </h1>
           </div>
         </div>
       </div>
-      <div class="full_width inner-breadcum">
+      
+      <!--<div class="full_width inner-breadcum">
         <ul>
           <li><a href="{{url('/')}}">Home</a></li>
           <li><a href="{{url('/services')}}">Services</a></li>
-          <li><a href="{{url('/services/'.$servicedata->service_slug)}}">Student Visa</a></li>
+          <li><a href="">{{ $servicedata->service_title }}</a></li>
         </ul>
-      </div>
+      </div>-->
+
     </div>
 
     <div class="full_width service-details-wrap">
@@ -98,8 +100,7 @@
                       placeholder="Subject"
                     ></textarea>
                     <button
-                      class="cmnBtn font_16 bgcolorred colorWhite radius-2"
-                    >
+                      class="cmnBtn font_16 bgcolorred colorWhite radius-2" >
                       Submit Now
                     </button>
                   </form>
@@ -107,7 +108,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-8 col-12 service-details-wrap-rgt">
+
+        <div class="col-md-8 col-12 service-details-wrap-rgt">
             <div class="full_width service-details-wrap-rgt-in">
               <div class="full_width service-details-big-img">
                 <img
@@ -119,13 +121,13 @@
               </div>
               <div class="full_width visaappli-prcss font_16 font400">
                 <h4 class="font_26 font700 colorBlack">
-                  Visa Application Whole Process
+                    Visa Application Whole Process
                 </h4>
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Iusto, quae temporibus? Placeat ea dolorum at officiis laborum
                   recusandae enim magni.
-                </p>
+                </p>              
                 <div class="full_width appli-box-pnl">
                   <div class="row">
                     <div class="col-md-4 col-12 appli-box text-center">
@@ -170,11 +172,15 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>                    
               </div>
             </div>
-          </div>
-        </div>
+            <div class="location-rght-apply">
+               <a class="applynow desktop-appy" href="#">Apply Now</a>
+            </div>
+
+          </div>        
+       </div>
       </div>
     </div>
 

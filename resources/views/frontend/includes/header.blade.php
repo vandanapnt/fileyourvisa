@@ -46,10 +46,12 @@
                   services
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{{ url('/services') }}">Services</a></li>
+                  <li><a class="dropdown-item" href="{{ url('/services') }}">All Services</a></li>
+                  @foreach($services as $k => $service)
                   <li>
-                    <a class="dropdown-item" href="{{ url('/services/student-visa') }}">Services Details</a>
+                    <a class="dropdown-item" href="{{url('/services/'.$service->service_slug)}}">{{ $service->service_title }}</a>
                   </li>
+                  @endforeach
                 </ul>
               </li>
               <li class="nav-item">
